@@ -25,3 +25,57 @@ Math Engine: SymPy (Python)
 🚀 Getting Started
 
 To run this project locally, you will need to start both the Python backend server and the Flutter mobile application.
+
+1. Backend Setup (FastAPI & SymPy)
+
+The backend handles all the heavy mathematical lifting using SymPy.
+
+Navigate to the backend directory:
+
+cd backend
+
+
+Install the required Python dependencies:
+
+pip install fastapi uvicorn sympy pydantic
+
+
+Start the server using Uvicorn:
+
+uvicorn main:app --reload
+
+
+The backend will now be running at http://localhost:8000. You can view the interactive API docs at http://localhost:8000/docs.
+
+2. Frontend Setup (Flutter)
+
+The frontend provides the interactive mobile UI.
+
+Ensure you have Flutter installed on your machine.
+
+Navigate to the root of the Flutter project:
+
+cd unicalc_pro
+
+
+Fetch the Flutter dependencies:
+
+flutter pub get
+
+
+Run the app on your connected device or emulator:
+
+flutter run
+
+
+📡 Architecture Note
+
+Currently, the application requires an active internet connection to compute new problems, as the frontend sends mathematical inputs to the external FastAPI server for processing via SymPy.
+
+🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
+
+📝 License
+
+This project is licensed under the MIT License.
